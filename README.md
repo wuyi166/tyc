@@ -106,7 +106,7 @@ http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114
 
 
 
-###企业基本信息查询返回的数据
+### 企业基本信息查询返回的数据
 
 ![](https://iddc2.deloitte.com.cn/asset/images/baseinfo.jpg)
 
