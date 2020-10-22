@@ -14,18 +14,27 @@
 *   [企业行政处罚](#企业行政处罚查询返回的数据)
 *   [企业严重违法](#企业严重违法查询返回的数据)
 
-`收到onState后，如果event为AI_AUDIO_STATE_RESPONSE，将会有结构化数据。`
+ 
+
+### 调用查询方式
+#### 调用说明
+
+**URL** 为对应的服务器域名地址
+
+```
+http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114&apiKey=D7D93E04FXXXXXX98E94XXXXX5A8AF33933195C434&secretKey=191446631XXXXXXXXXX33E3E455D51A4884230632692B9CCC1A7DB0B2F0770815D772097CF7619A88C
+```
 
 #### 参数说明
 
-| 属性        | 说明           |
-| ----------- | -------------- |
-| companyName | 查询企业的名字 |
-| type        | 查询业务类型   |
-| apiKey      | 授权码         |
-| secretKey   | 授权验证码     |
+| 属性        | 说明                            |
+| ----------- | ------------------------------- |
+| companyName | 查询企业的名字                  |
+| type        | 查询[业务类型](#业务类型映射表) |
+| apiKey      | 授权码                          |
+| secretKey   | 授权验证码                      |
 
-#### Type 业务类型映射表
+#### 业务类型映射表
 | 值   | 说明         |
 | ---- | ------------ |
 | 110  | 企业基本信息 |
@@ -40,13 +49,7 @@
 | 140  | 企业经营异常 |
 | 140  | 企业图谱 |
 
-#### 调用说明
 
-**URL** 为对应的服务器域名地址
-
-```
-http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114&apiKey=D7D93E04FXXXXXX98E94XXXXX5A8AF33933195C434&secretKey=191446631XXXXXXXXXX33E3E455D51A4884230632692B9CCC1A7DB0B2F0770815D772097CF7619A88C
-```
 
 #### 返回JSON对象：
 | 属性    | 说明                                   |
@@ -65,7 +68,7 @@ http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114
 	"code": 200,
 	"msg": "service is ok",
 	"data": {
-	 
+	 	查询的数据主体[data](#data数据格式)
 	},
 	"extra": null
 }
@@ -105,7 +108,7 @@ http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114
 | 300011	| 此IP无权限访问此api|
 
 
-
+## 业务返回数据结构主体
 ### 企业基本信息查询返回的数据
 
 ![](https://iddc2.deloitte.com.cn/asset/images/baseinfo.jpg)
