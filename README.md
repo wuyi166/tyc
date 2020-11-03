@@ -13,6 +13,7 @@
 *   [企业经营异常](#企业经营异常查询返回的数据)
 *   [企业行政处罚](#企业行政处罚查询返回的数据)
 *   [企业严重违法](#企业严重违法查询返回的数据)
+*   [企业搜索](#企业搜索查询返回的数据)
 
  
 
@@ -48,6 +49,7 @@ http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114
 | 133  | 企业严重违法 |
 | 140  | 企业经营异常 |
 | 140  | 企业图谱 |
+| 109  | 企业搜索 |
 
 
 
@@ -1011,3 +1013,61 @@ http://URL/enterpinfo/v1/api?companyName=平安银行股份有限公司&type=114
 }
 ```
 
+####  企业搜索查询返回的数据
+![](https://iddc2.deloitte.com.cn/asset/images/jyyc.jpg)
+
+**result 返回数据示例**
+```
+{
+	"error_code": 0,
+	"reason": "ok",
+	"result": {
+		"items": [{
+				"regNumber": "110108002734659",
+				"regStatus": "在业",
+				"creditCode": "91110000802100433B",
+				"estiblishTime": "2001-06-05 00:00:00.0",
+				"regCapital": "1342128万人民币",
+				"companyType": 1,
+				"name": "<em>北京百度网讯科技有限公司</em>",
+				"id": 22822,
+				"orgNumber": "802100433",
+				"type": 1,
+				"base": "北京",
+				"legalPersonName": "梁志祥"
+			},
+			{
+				"regNumber": "440106000623068",
+				"regStatus": "在业",
+				"creditCode": "91440101675657502F",
+				"estiblishTime": "2008-05-20 00:00:00.0",
+				"regCapital": "-",
+				"companyType": 1,
+				"name": "<em>北京百度网讯科技有限公司</em>广州分公司",
+				"id": 139572971,
+				"orgNumber": "675657502",
+				"type": 1,
+				"base": "广东",
+				"legalPersonName": "沈抖"
+			},			
+			{
+				"regNumber": "110112017796164",
+				"regStatus": "在业",
+				"creditCode": "911101053067230171",
+				"estiblishTime": "2014-08-28 00:00:00.0",
+				"regCapital": "3735.1363万人民币",
+				"companyType": 1,
+				"name": "<em>北京</em>太合音乐文化发展<em>有限公司</em>",
+				"id": 934605,
+				"orgNumber": "306723017",
+				"type": 1,
+				"base": "北京",
+				"legalPersonName": "钱实穆"
+			}
+		],
+		"total": 56
+	}
+}
+
+
+```
